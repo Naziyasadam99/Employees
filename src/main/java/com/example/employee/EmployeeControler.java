@@ -81,9 +81,9 @@ public String  getDetail(@PathVariable int id)
 	}
 	@PostMapping(value="/findException")
 	
-	public String findbySalary (@RequestBody Employees e) throws SalaryException,Exception
+	public String findbySalary (@RequestBody Employees em) throws SalaryException,Exception
 		{
-		return empser.findbySalary(e);	
+		return empser.findbySalary(em);	
 		}
 	
 	

@@ -79,12 +79,12 @@ public class EmployeeService {
 	}
 	  static Logger log = Logger.getLogger(EmployeeService.class);
 	  
-	  public String findbySalary(Employees e) throws SalaryException,Exception {
+	  public String findbySalary(Employees em) throws SalaryException,Exception {
 		  PropertyConfigurator.configure("log4jfile.properties");
 		 
 //		  try 
 //		  {
-		  if(e.getSalary()>30000)
+		  if(em.getSalary()>30000)
 		  {
 			  log.error(new SalaryException("enter within 30000"));
 			  throw new SalaryException("enter within 30000");
@@ -92,7 +92,7 @@ public class EmployeeService {
 		  }
 		  else
 		  {
-			  return empDao.findbySalary(e); // try-catch block and globalhandling also there means try - catch block only execute; 
+			  return empDao.findbySalary(em); // try-catch block and globalhandling also there means try - catch block only execute; 
 			  
 		  }
 		  //}

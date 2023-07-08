@@ -53,8 +53,8 @@ public class EmployeeDao {
 			return empRepo.getEmpname(e);
 		}
 		
-		public String findbySalary(Employees e) throws SalaryException,Exception {
-			empRepo.save(e);
-			return "success";
+		public String findbySalary(Employees em) throws SalaryException,Exception {
+			empRepo.save(em);
+			return "successfully undated";
 		}
 }
